@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Ponto - ONG Sustentável</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f4ea;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .container {
+            margin-top: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .clock {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+        button {
+            background-color: #43a047;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #388e3c;
+        }
+        .log {
+            margin-top: 20px;
+            background-color: #f1f8e9;
+            padding: 10px;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Registro de Ponto - RAÍZES DO SABER 🍁</h1>
+    </header>
+    <div class="container">
+        <div class="clock" id="clock">--:--:--</div>
+        <select id="employeeSelect">
+            <option value="">Selecione o funcionário</option>
+            <option value="ADRIANE MARYCA PEREIRA BARBOSA">ADRIANE MARYCA PEREIRA BARBOSA</option>
+<option value="ANA CAROLINA REIS NEVES">ANA CAROLINA REIS NEVES</option>
+<option value="CAMILY DO CARMO ASCENÇÃO CASTRO">CAMILY DO CARMO ASCENÇÃO CASTRO</option>
+<option value="CARLA DA SILVA PIRES">CARLA DA SILVA PIRES</option>
+<option value="EDELSON MACEDO DA CUNHA">EDELSON MACEDO DA CUNHA</option>
+<option value="ERICK RONALD FERREIRA MARQUES">ERICK RONALD FERREIRA MARQUES</option>
+<option value="FERNANDA TRINDADE DE SOUSA">FERNANDA TRINDADE DE SOUSA</option>
+<option value="GABRIEL RONIE FREITAS DA SILVA">GABRIEL RONIE FREITAS DA SILVA</option>
+<option value="GABRIELA ESTHER DOS SANTOS CAVALHEIRO">GABRIELA ESTHER DOS SANTOS CAVALHEIRO</option>
+<option value="GABRYEL CAVALCANTE DA SILVA">GABRYEL CAVALCANTE DA SILVA</option>
+<option value="HUGO WANDEL SOARES DE ALMEIDA">HUGO WANDEL SOARES DE ALMEIDA</option>
+<option value="ISRAEL RODRIGUES ESTRELA">ISRAEL RODRIGUES ESTRELA</option>
+<option value="JAMILLY VITÓRIA LOURENÇO SILVA">JAMILLY VITÓRIA LOURENÇO SILVA</option>
+<option value="JEFERSON DE JESUS DO EGITO PEREIRA JUNIOR">JEFERSON DE JESUS DO EGITO PEREIRA JUNIOR</option>
+<option value="JENNIFER DA ROCHA COSTA">JENNIFER DA ROCHA COSTA</option>
+<option value="JOANNE PANTOJA DA FONSECA">JOANNE PANTOJA DA FONSECA</option>
+<option value="JOÃO VÍTOR BARBOSA DA SILVA">JOÃO VÍTOR BARBOSA DA SILVA</option>
+<option value="JOÃO VITOR DO NASCIMENTO GONÇALVES">JOÃO VITOR DO NASCIMENTO GONÇALVES</option>
+<option value="JORIANNE COSTA DOS SANTOS">JORIANNE COSTA DOS SANTOS</option>
+<option value="KAROLINA CRISTINA PANTOJA MAIA">KAROLINA CRISTINA PANTOJA MAIA</option>
+<option value="KELVYN LEANDRO PEREIRA SOARES">KELVYN LEANDRO PEREIRA SOARES</option>
+<option value="KESSIA EDUARDA PEREIRA DOS SANTOS">KESSIA EDUARDA PEREIRA DOS SANTOS</option>
+<option value="LEANDRO TEIXEIRA RAFAEL">LEANDRO TEIXEIRA RAFAEL</option>
+<option value="LÍVIA LETICIA PINHO NOGUEIRA">LÍVIA LETICIA PINHO NOGUEIRA</option>
+<option value="LUCAS FARIAS MAGNO">LUCAS FARIAS MAGNO</option>
+<option value="LUIZ HENRIQUE LIMA DA SILVA">LUIZ HENRIQUE LIMA DA SILVA</option>
+<option value="MARIA FERNANDA DOS SANTOS CARDOSO">MARIA FERNANDA DOS SANTOS CARDOSO</option>
+<option value="MARIA HELENA DA SILVA GOMES">MARIA HELENA DA SILVA GOMES</option>
+<option value="RAFAEL CLAYTON REIS DA SILVA">RAFAEL CLAYTON REIS DA SILVA</option>
+<option value="RAYLA POCA E POCA">RAYLA POCA E POCA</option>
+<option value="RYAN RABIB CARDOSO FIGUEIREDO">RYAN RABIB CARDOSO FIGUEIREDO</option>
+<option value="VALDENILDE RIBEIRO CONCEIÇÃO">VALDENILDE RIBEIRO CONCEIÇÃO</option>
+<option value="VIVIANE CRISTINA LOPES FROES">VIVIANE CRISTINA LOPES FROES</option>
+<option value="WILSON VINICIUS NEGRÃO CORRÊA">WILSON VINICIUS NEGRÃO CORRÊA</option>
+        </select>
+        <button onclick="registrarPonto('entrada')">Registrar Entrada</button>
+        <button onclick="registrarPonto('saída')">Registrar Saída</button>
+        <div class="log" id="log"></div>
+    </div>
+
+    <script>
+        function atualizarRelogio() {
+            const agora = new Date();
+            const horas = agora.toLocaleTimeString();
+            document.getElementById('clock').innerText = horas;
+        }
+        setInterval(atualizarRelogio, 1000);
+
+        function registrarPonto(tipo) {
+            const nome = document.getElementById('employeeSelect').value;
+            if (!nome) {
+                alert("Por favor, selecione um funcionário.");
+                return;
+            }
+            const agora = new Date();
+            const horario = agora.toLocaleTimeString();
+            const data = agora.toLocaleDateString();
+            const registro = `✅ {"Entrada" if tipo === 'entrada' else "Saída"} de <strong>${nome}</strong> registrada às <strong>${horario}</strong> em <strong>${data}</strong>.<br>`;
+            document.getElementById('log').innerHTML += registro;
+        }
+    </script>
+</body>
+</html>
