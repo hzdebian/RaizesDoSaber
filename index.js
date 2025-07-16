@@ -1,3 +1,9 @@
+ function atualizarRelogio() {
+            const agora = new Date();
+            const horas = agora.toLocaleTimeString();
+            document.getElementById('clock').innerText = horas;
+        }
+        setInterval(atualizarRelogio, 1000);
 function registrarPonto(tipo) {
     const nome = document.getElementById('employeeSelect').value;
     if (!nome) {
