@@ -2,8 +2,8 @@
 Repositório para armazenar códigos de projetos da Empresa Júnior "Raízes do Saber"
 
 
-Commit 16.07.2025:/n
-Adcionados Imagens de fundo da página e a Logo da empresa.
+Commit 16.07.2025:
+<p>Adcionados Imagens de fundo da página e a Logo da empresa.</p>
 - Upgrades visuais
 - Footer adcionado
 
