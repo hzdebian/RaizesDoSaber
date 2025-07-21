@@ -153,5 +153,7 @@ a:hover { /* ou outra cor no hover, se quiser */
     padding: 0.5em;
     font-size: 0.6em;
     text-align: justify;
+  }.textos > p{
+    text-align: center;
   }
 }
