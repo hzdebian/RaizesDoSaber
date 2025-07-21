@@ -12,3 +12,9 @@ Em versões anteriores, adcionei funcionalidades ao projeto, tais como:
 - Armazenamento de dados em um planilha utilizando Google Sheet como Banco de Dados
 - Melhorias no visual da página
 - Correção de bugs e muito mais.
+
+Commit 21.07
+- Página Inicial Adcionada
+- Mudanças visuais no controle de ponto
+- melhorias no sistema
+- correção de bugs
