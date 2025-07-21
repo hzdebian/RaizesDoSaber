@@ -1,12 +1,15 @@
   * {
     margin: 0;
     padding: 0;
+
   }
   body {
             font-family: Arial, sans-serif;
             background-color: #e6f4ea;
             margin: 0;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #2e7d32;
@@ -41,7 +44,7 @@
         }
         .container {
             margin-top: 30px;
-            background-color: white;
+            background-color: rgb(27, 107, 27);
             padding: 20px;
             border-radius: 10px;
             max-width: 600px;
@@ -50,15 +53,26 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .clock {
+            color: aliceblue;
+            font-family: "Quicksand", sans-serif;
             font-size: 1,5em;
+            font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
         }
         select, button {
+            font-family: quicksand, sans-serif;
+            background-color: yellowgreen;
+            color: black;
+            border: 1px solid #43a047;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.527);
+            transition: background-color 0.3s ease;
             padding: 10px;
             margin: 5px;
             width: 100%;
             font-size: 16px;
+            font-weight: bold;
         }
         button {
             background-color: #43a047;
@@ -72,7 +86,7 @@
         }
         .log {
             margin-top: 20px;
-            background-color: #f1f8e9;
+            background-color: #90f320;
             padding: 10px;
             border-radius: 5px;
             max-height: 300px;
@@ -85,4 +99,16 @@
             margin-top: 20px;
             font-size: 0.8em;
             color: #09660c;
+        }option {
+            font-family: "Quicksand", sans-serif;
+            font-weight: bold;
+            background-color: #c8e6c9;
+            color: #1b5e20;
+            padding: 10px;
+            border: 1px solid #43a047;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }#employeeSelect{
+            font-size: 0.6em;
         }
