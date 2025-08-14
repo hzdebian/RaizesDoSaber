@@ -9,8 +9,6 @@
 ## 📊 Status do Projeto
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![PRs](https://img.shields.io/badge/PRs-bem--vindos-brightgreen)
-![License](https://img.shields.io/badge/licença-MIT-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/hzdebian/RaizesDoSaber)
 
 ---
