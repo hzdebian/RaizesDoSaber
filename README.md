@@ -57,10 +57,3 @@ Este repositório reúne os projetos desenvolvidos pela Empresa Júnior **Raíze
 - 🐛 Correção de bugs
 
 ---
-
-## 🧪 Como usar o projeto
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/hzdebian/RaizesDoSaber.git
